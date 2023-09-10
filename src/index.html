@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简介</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="avatar-container">
+                <img class="avatar-image" src="image/avata.png" alt="头像">
+                <!-- <h3>朱才东</h3> -->
+            </div>
+            <!-- <p>一句话简介</p> -->
+        </div>
+    </header>
+    <nav class="navbar">
+        <!-- <ul class="nav-list">
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#contact">联系方式</a></li>
+        </ul> -->
+    </nav>
+    <section id="about" class="about">
+        <div class="section-content">
+            <h2>关于我</h2>
+            <p>白天代码大师，晚上泡面王者。</p>
+        </div>
+    </section>
+    <section id="skills" class="skills">
+        <div class="section-content">
+            <h2>技能</h2>
+            <ul>
+                <li>Python开发者，后端、数据分析与处理</li>
+                <li>大数据开发者，Hadoop生态、Spark处理、scikit-learn算法应用</li>
+                <li>前端探索者，Vue、React、Next.js</li>
+                <li>AIGC探索者，Copilot、GPT、Chat本地知识库、Midjourney、Stable Diffusion</li>
+                <!-- 可以继续添加更多技能 -->
+            </ul>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="section-content">
+            <h2>社交媒体</h2>
+            <!-- <p>contact me</p> -->
+            <ul>
+                <li>
+                    <div class="contact-container">
+                        <a target="_blank" href="https://github.com/CodeDevNinja" title="github">
+                            <img class="contact-image" src="image/github.png" alt="github">
+                        </a>
+                        <a target="_blank" href="mailto:zhucaidong@aliyun.com" title="email">
+                            <img class="contact-image" src="image/email.png" alt="email">
+                        </a>
+                        <a target="_blank" href="https://twitter.com/opbycqnQIdrYcss" title="twitter">
+                            <img class="contact-image" src="image/twitter.png" alt="twitter"></a>
+                        <a target="_blank"
+                            href="https://raw.githubusercontent.com/caidong/Picture/main/Blog/Image/2022WeChate6f4653196256a3cadce10d9efc78d82.png"
+                            title="wechat">
+                            <img class="contact-image" src="image/wechat.png" alt="wechat"></a>
+                    </div>
+                </li>
+                <!-- <li>电话号码: (123) 456-7890</li> -->
+                <!-- 添加更多联系方式，如社交媒体链接等 -->
+            </ul>
+        </div>
+    </section>
+</body>
+<footer>
+    <span id="sitetime"></span> <!--显示建站时间的地方放置此代码 可以加上其他代HTML代码加粗颜色等-->
+    |
+    <p id="busuanzi_container_site_pv">访问量:<span id="busuanzi_value_site_pv"></span>次.
+        <!-- 访客量:<span id="busuanzi_value_site_uv"></span>次</p> -->
+    <p>&copy; 2023 京ICP备2021037166号-1. 版权所有.</p>
+
+</footer>
+
+</html>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        var t1 = Date.UTC(2023, 09, 10, 23, 00, 00);  //此处填写建站时间 依次为 年,月,日,时,分,秒注意格式 半角,
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "🕓Code ninja's Blog 已开通 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒"; //此处为显示的内容
+    }
+    siteTime();
+</script>
